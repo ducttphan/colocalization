@@ -5,6 +5,15 @@ from pandas.core.reshape.concat import concat
 import streamlit as st 
 import os
 
+st.image(image='Linear_Logo.tif') 
+st.header('Analyze Colocalization')
+st.write("""__Instructions:__   
+1. Type in name your group. (__Note:__ Avoid using special characters when naming. For example, replace "_10,000 RFU/mL_" with "_10K RFU(mL-1)_")    
+2. Indicate number of timepoint(s) in the time course experiment.  
+3. Upload your _*_Image.csv_ file from CellProfiler pipeline.   
+4. Type in directory path to save raw or normalized .csv files. (e.g. _/Users/a/Desktop/data/_)  
+""")
+    
 name_input = st.text_input("Name of group:")
 time_input = st.text_input("Time point associated with this dataset:")
 uploaded_file = st.file_uploader("Select .csv file from CellProfiler pipeline:")
